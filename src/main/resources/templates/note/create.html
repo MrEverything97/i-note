@@ -33,6 +33,7 @@
                 <select th:field="*{type}">
                     <option th:each="t : ${types}" th:value="${t.id}" th:text="${t.name}"></option>
                 </select>
+                <a href="/create-type">Add new note type</a>
             </td>
         </tr>
         <tr>
@@ -40,7 +41,10 @@
             <td><input type="text" th:field="*{content}"/></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" value="Create a new note"></td>
+            <td colspan="2">
+                <button><a href="/notes">Cancel</a></button>
+                <input type="submit" value="Create a new note">
+            </td>
         </tr>
     </table>
 </form>
